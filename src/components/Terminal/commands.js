@@ -7,7 +7,6 @@ const CommandSeperator = () => <div className="my-4" />;
 
 export const about = {
   description: 'About me',
-  usage: 'about',
   fn: function (terminal, isTypedCommand) {
     return (
       <div>
@@ -29,16 +28,16 @@ export const about = {
         </p>
         <p className="mb-2">
           Right now I'm more focused on the frontend of things. However, I'd
-          like to be more focused on the bakckend side of applications. More
+          like to be more focused on the backend side of applications. More
           specific on how{' '}
           <span className="text-extra">these services are deployed</span>.
         </p>
         <p className="mb-2">
           Programming aside, I like playing the{' '}
           <Emoji symbol={'🎸'} label="guitar" /> and doing sports. I like to
-          play squash and ride my bike to work. I also like to see the world ,
-          when these covid-days are under control{' '}
-          <Emoji symbol={'\u{1F9DF}'} label="zombie" />.
+          play squash and ride my bike to work. When these Covid-days are over
+          <Emoji symbol={'\u{1F9DF}'} label="zombie" />, I'd like to see a bit
+          more of the world.
         </p>
         <CommandSeperator />
       </div>
@@ -48,7 +47,6 @@ export const about = {
 
 export const technologies = {
   description: 'What technologies are on my radar?',
-  usage: 'technologies',
   fn: function (terminal, isTypedCommand) {
     return (
       <div className="flex-col flex-grow">
@@ -120,7 +118,6 @@ export const technologies = {
 
 export const degrees = {
   description: 'My obtained degrees',
-  usage: 'degrees',
   fn: function (terminal, isTypedCommand) {
     return (
       <div>
@@ -134,10 +131,10 @@ export const degrees = {
         <Emoji symbol={'\u{1F9D1}\u{200D}\u{1F393}'} /> :
         <ul>
           <li>
-            - Master of science in Engineering Technology: Information
+            - Master of Science in Engineering Technology: Information
             Engineering Technology (UGent)
           </li>
-          <li>- Bachelor of science in Applied Computer Science (HoGent)</li>
+          <li>- Bachelor of Science in Applied Computer Science (HoGent)</li>
         </ul>
         <CommandSeperator />
       </div>
@@ -163,52 +160,8 @@ export const experiences = {
         </p>
         <ul className="list-outside pl-1">
           <li>
-            <span className="text-extra">-</span> Helpdesk at general hospital
-            Maria Middelares (2016)
-          </li>
-          <li>
-            <span className="text-extra">-</span> Mobile app developer at
-            Skedify (2017)
-          </li>
-          <ul className="list-outside pl-4">
-            <li>
-              <span className="text-white">* </span> iOS app developer in Swift
-              3
-            </li>
-          </ul>
-          <li>
-            <span className="text-extra">-</span> Teacher at Codefever{' '}
-            <Emoji symbol={'\u{1F468}\u{200D}\u{1F3EB}'} label="teacher" />
-            (2016-2019)
-          </li>
-          <ul className="pl-4">
-            <li>
-              <span className="text-white">* </span>Teaching basic programming
-              principles in Scratch
-            </li>
-            <li>
-              <span className="text-white">* </span>Explaining basic Javascript
-              principles with use of Microsoft's Microbit and Minecraft
-              Education Edition
-            </li>
-          </ul>
-          <li>
-            <span className="text-extra">-</span> Internship at In The Pocket
-            (2019)
-          </li>
-          <ul className="pl-4">
-            <li>
-              <span className="text-white">* </span> Helping to build a React
-              application
-            </li>
-            <li>
-              <span className="text-white">* </span> Create mappers for the
-              Hubble design system for Figma (Javascript)
-            </li>
-          </ul>
-          <li>
-            <span className="text-extra">-</span> Frontend developer at
-            Codefever (2020 - current)
+            <span className="text-extra">-</span> Frontend developer at FTRPRF
+            (2020 - current)
           </li>
           <ul className="pl-4">
             <li>
@@ -228,6 +181,54 @@ export const experiences = {
               packages
             </li>
           </ul>
+
+          <li>
+            <span className="text-extra">-</span> Internship at In The Pocket
+            (2019)
+          </li>
+          <ul className="pl-4">
+            <li>
+              <span className="text-white">* </span> Helping to build a React
+              application
+            </li>
+            <li>
+              <span className="text-white">* </span> Create mappers for the
+              Hubble design system for Figma (Javascript)
+            </li>
+          </ul>
+
+          <li>
+            <span className="text-extra">-</span> Teacher at Codefever{' '}
+            <Emoji symbol={'\u{1F468}\u{200D}\u{1F3EB}'} label="teacher" />
+            (2016-2019)
+          </li>
+          <ul className="pl-4">
+            <li>
+              <span className="text-white">* </span>Teaching basic programming
+              principles in Scratch
+            </li>
+            <li>
+              <span className="text-white">* </span>Explaining basic Javascript
+              principles with use of Microsoft's Microbit and Minecraft
+              Education Edition
+            </li>
+          </ul>
+
+          <li>
+            <span className="text-extra">-</span> Mobile app developer at
+            Skedify (2017)
+          </li>
+          <ul className="list-outside pl-4">
+            <li>
+              <span className="text-white">* </span> iOS app developer in Swift
+              3
+            </li>
+          </ul>
+
+          <li>
+            <span className="text-extra">-</span> Helpdesk at general hospital
+            Maria Middelares (2016)
+          </li>
         </ul>
         <CommandSeperator />
       </div>
