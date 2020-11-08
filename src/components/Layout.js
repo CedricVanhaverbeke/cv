@@ -26,6 +26,10 @@ const Layout = ({ children }) => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Cedric Vanhaverbeke</title>
+        <meta
+          name="description"
+          content="Cedric Vanhaverbeke. Software Engineer."
+        />
       </Helmet>
       {children}
     </div>
