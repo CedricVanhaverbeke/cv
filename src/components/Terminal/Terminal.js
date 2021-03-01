@@ -16,11 +16,11 @@ const Terminal = ({
     <Window className={className} isClosable={isClosable}>
       <CETerminal
         ref={terminalRef}
-        style={{ backgroundColor: '#191A21', fontFamily: 'Fira Code' }}
-        className="flex-grow w-full"
+        style={{ backgroundColor: '#191A21' }}
+        className="flex-grow w-full react-terminal"
         commands={commands}
-        promptLabelStyle={{ color: '#FF78C3' }}
-        inputStyle={{ color: '#FFF' }}
+        promptLabelStyle={{ color: '#FF78C3', paddingTop: 0 }}
+        inputStyle={{ color: '#FFF', paddingTop: '1rem' }}
         welcomeMessage={
           welcomeMessage || (
             <div className="flex flex-col gap-x-2 w-full gap-y-2">

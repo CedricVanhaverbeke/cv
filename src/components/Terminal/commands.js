@@ -3,8 +3,6 @@ import Emoji from 'a11y-react-emoji';
 
 import AsciiTable, { Row } from '../AsciiTable';
 
-const CommandSeperator = () => <div className="my-4" />;
-
 export const about = {
   description: 'About me',
   fn: function (terminal, isTypedCommand) {
@@ -39,7 +37,6 @@ export const about = {
           <Emoji symbol={'\u{1F9DF}'} label="zombie" />, I'd like to see a bit
           more of the world.
         </p>
-        <CommandSeperator />
       </div>
     );
   },
@@ -110,7 +107,6 @@ export const technologies = {
             </Row>
           </AsciiTable>
         </div>
-        <CommandSeperator />
       </div>
     );
   },
@@ -136,7 +132,6 @@ export const degrees = {
           </li>
           <li>- Bachelor of Science in Applied Computer Science (HoGent)</li>
         </ul>
-        <CommandSeperator />
       </div>
     );
   },
@@ -230,7 +225,6 @@ export const experiences = {
             Maria Middelares (2016)
           </li>
         </ul>
-        <CommandSeperator />
       </div>
     );
   },
