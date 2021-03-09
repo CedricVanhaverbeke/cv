@@ -8,7 +8,9 @@ const Header = ({ hasPageLinks, hasBackButton }) => {
     <div className="w-full">
       <div className="flex flex-col md:flex-row items-center justify-center lg:justify-between lg:items-end content-end w-full p-4 lg:p-4 lg:px-16 text-extra">
         <div className="flex flex-col md:flex-row gap-x-4 items-center">
-          <ProficePicture className="h-24 flex-shrink-0" />
+          <Link to="/">
+            <ProficePicture className="h-24 flex-shrink-0" />
+          </Link>
           <div className="flex flex-col text-center md:text-left">
             <div
               style={{ fontFamily: 'Roboto' }}
