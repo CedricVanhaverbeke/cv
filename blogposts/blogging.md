@@ -190,7 +190,7 @@ However, it would be quite frustrating to add components for each html tag. That
 ```css
 /* inside your css file */
 
-blogpost p {
+.blogpost p {
   add-some-cool-styles
 }
 ```
