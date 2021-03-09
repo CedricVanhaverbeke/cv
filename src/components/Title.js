@@ -1,7 +1,12 @@
 import React from 'react';
 
 const Title = ({ children }) => (
-  <span className="text-xl text-white">{children}</span>
+  <span
+    style={{ fontFamily: 'Roboto' }}
+    className="text-xl text-white font-bold"
+  >
+    {children}
+  </span>
 );
 
 export default Title;

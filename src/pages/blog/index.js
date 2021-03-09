@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import { Helmet } from 'react-helmet';
 
 import Layout from '../../layouts/Layout';
 
@@ -12,20 +13,19 @@ const Overview = ({ data }) => {
 
   return (
     <Layout>
-      <Header>
-        <Link to="/" className="p-2 cursor-pointer hover:text-extra">
-          Back
-        </Link>
-      </Header>
+      <Header />
+      <Helmet>
+        <title>Blog - Cedric Vanhaverbeke</title>
+      </Helmet>
 
-      <Content>
-        <div className="flex gap-x-2">
+      <Content className="px-6 md:px-16">
+        <div className="flex gap-4 flex-wrap justify-center md:justify-start py-4">
           {allMarkdownRemark.edges.map(({ node }) => {
             return (
-              <div className="flex flex-col bg-dark text-white rounded-xl w-64">
+              <div className="flex flex-col bg-dark text-white rounded-xl w-full mx-1 md:w-1/3 lg:w-1/5">
                 <Window>
                   <Link
-                    to={node.frontmatter.slug}
+                    to={node.id}
                     style={{ fontFamily: 'Fira Mono' }}
                     className="flex flex-col p-3"
                   >
@@ -49,14 +49,12 @@ const Overview = ({ data }) => {
 
 export const pageQuery = graphql`
   query Blogposts {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: frontmatter___date, order: ASC }) {
       edges {
         node {
           id
-          html
           frontmatter {
             title
-            slug
             date
             description
           }

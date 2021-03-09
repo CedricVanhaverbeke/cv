@@ -4,16 +4,18 @@ const Window = ({ children, className, isClosable }) => {
   const [isVisible, setIsVisible] = useState(true);
   if (!isVisible) {
     return (
-      <span className="text-sm sm:text-md sm:text-xl lg:text-2xl xl:text-4xl text-white pb-20">
-        Yes, the terminal actually closes... Click{' '}
-        <a
-          className="cursor-pointer text-extra"
-          onClick={() => setIsVisible(true)}
-        >
-          here
-        </a>{' '}
-        to open it again.
-      </span>
+      <div className="w-full h-full flex items-center justify-center">
+        <span className="text-sm sm:text-md sm:text-xl lg:text-2xl xl:text-4xl text-white pb-20">
+          Yes, the terminal actually closes... Click{' '}
+          <a
+            className="cursor-pointer text-extra"
+            onClick={() => setIsVisible(true)}
+          >
+            here
+          </a>{' '}
+          to open it again.
+        </span>
+      </div>
     );
   }
 

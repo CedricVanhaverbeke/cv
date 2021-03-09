@@ -23,17 +23,14 @@ const Terminal = ({
         inputStyle={{ color: '#FFF', paddingTop: '1rem' }}
         welcomeMessage={
           welcomeMessage || (
-            <div className="flex flex-col gap-x-2 w-full gap-y-2">
+            <div className="flex flex-col gap-x-2 w-full gap-y-6 pb-2">
               <p>My name is Cedric Vanhaverbeke. Nice to meet you! </p>
               <p>
-                Click a button on the top right or enter one of following
-                commands:
-              </p>
-              <p>
+                Enter one of the following commands to get to know me:
                 <ul>
-                  <li> help - Show a list of available commands.</li>
+                  <li>help - Show a list of available commands.</li>
                   <li>clear - Empty the terminal window.</li>
-                  <li>about - About me</li>
+                  <li>whoami - Get to know me a bit better</li>
                   <li>technologies - What technologies are on my radar?</li>
                   <li>degrees - My obtained degrees</li>
                   <li>experiences - Find out about my work experiences</li>

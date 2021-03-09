@@ -34,13 +34,6 @@ module.exports = {
         path: `${__dirname}/blogposts`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/blogposts`,
-        name: `blogposts`,
-      },
-    },
     `gatsby-transformer-remark`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

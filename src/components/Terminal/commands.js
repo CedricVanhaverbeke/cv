@@ -3,39 +3,39 @@ import Emoji from 'a11y-react-emoji';
 
 import AsciiTable, { Row } from '../AsciiTable';
 
-export const about = {
-  description: 'About me',
+export const whoami = {
+  description: 'Get to know me a little better',
   fn: function (terminal, isTypedCommand) {
     return (
       <div>
-        {isTypedCommand && <span>{`${terminal.props.promptLabel} about`}</span>}
+        {isTypedCommand && (
+          <span>{`${terminal.props.promptLabel} whoami`}</span>
+        )}
         <p className="mb-2">
           My name is Cedric Vanhaverbeke. I'm a motivated{' '}
           <span className="text-extra">software engineer</span> from Belgium{' '}
           <Emoji symbol={'\u{1F1E7}\u{1F1EA}'} label="belgium" /> . Currently
           I'm working at <span className="text-extra">FTRPRF</span>, a company
-          that aims to revolutionize teaching.
+          that aims to teach children how to program at a young age!
         </p>
         <p className="mb-2">
           In this stage of my career, I want to{' '}
           <span className="text-extra">learn</span>{' '}
-          <Emoji symbol={'\u{1F4D6}'} label="book" /> as much as possible. My
-          main focus at the moment is frontend developing with Javascript. I'm
-          also very serious about automated testing with tools such as Jest and
-          React Testing Library.
+          <Emoji symbol={'\u{1F4D6}'} label="book" /> as much as possible. Right
+          now, I'm solving problems in the frontend with React. I like the
+          architecture of the application I'm working on to be elegant. React is
+          a great tool to achieve this goal in my opinion.
         </p>
         <p className="mb-2">
-          Right now I'm more focused on the frontend of things. However, I'd
-          like to be more focused on the backend side of applications. More
-          specific on how{' '}
-          <span className="text-extra">these services are deployed</span>.
+          In my masters thesis I got a taste of machine learning and how it may
+          help to solve otherwise impossible problems. I hope to get Tensorflow
+          certified and I'm planning to blog about this journey as well.
         </p>
         <p className="mb-2">
-          Programming aside, I like playing the{' '}
-          <Emoji symbol={'🎸'} label="guitar" /> and doing sports. I like to
-          play squash and ride my bike to work. When these Covid-days are over
-          <Emoji symbol={'\u{1F9DF}'} label="zombie" />, I'd like to see a bit
-          more of the world.
+          Programming and technology aside, I love to play boardgames and
+          playing the <Emoji symbol={'🎸'} label="guitar" />. I'm also always
+          available to chat and to grab a <Emoji symbol={'🍺'} label="🍺" />.
+          Too bad going to a bar is not a thing at the moment...
         </p>
       </div>
     );
@@ -73,28 +73,30 @@ export const technologies = {
             <Row>
               <div>
                 <ul>
-                  <li className="mt-32">Machine learning</li>
+                  <li className="mt-40">Machine learning</li>
+                  <li>Tensorflow</li>
+                  <li>PyTorch</li>
                   <li>Flutter</li>
                   <li>WebAssembly</li>
-                  <li>Kubernetes</li>
-                  <li>Microservice deployment</li>
+                  <li>Terraform</li>
                   <li>JAMstack</li>
                 </ul>
               </div>
               <div>
                 <ul>
-                  <li>Java</li>
-                  <li>Angular</li>
+                  <li className="mt-10">Java</li>
                   <li>Python</li>
                   <li>Nodejs</li>
                   <li>Bash scripting</li>
+                  <li>SKLearn</li>
                   <li>React-native</li>
+                  <li>C</li>
+                  <li>C++</li>
                   <li>Jest</li>
                   <li>Next</li>
                   <li>Gatsby</li>
-                  <li>C</li>
-                  <li>C++</li>
                   <li>Docker</li>
+                  <li>Kubernetes</li>
                 </ul>
               </div>
               <div>
@@ -116,7 +118,7 @@ export const degrees = {
   description: 'My obtained degrees',
   fn: function (terminal, isTypedCommand) {
     return (
-      <div>
+      <div className="pb-2">
         {isTypedCommand && (
           <span>
             {`${terminal.props.promptLabel} degrees`}
@@ -127,10 +129,27 @@ export const degrees = {
         <Emoji symbol={'\u{1F9D1}\u{200D}\u{1F393}'} /> :
         <ul>
           <li>
-            - Master of Science in Engineering Technology: Information
-            Engineering Technology (UGent)
+            <span className="text-extra">-</span> Master of Science in
+            Engineering Technology: Information Engineering Technology (UGent,
+            Magna Cum Laude)
           </li>
-          <li>- Bachelor of Science in Applied Computer Science (HoGent)</li>
+          <ul className="pl-4">
+            <li>
+              <span className="text-white">* </span> Master's thesis: Comparison
+              of recommending system based on supervised and unsupervised models
+              (17/20)
+            </li>
+          </ul>
+          <li>
+            <span className="text-extra">-</span> Bachelor of Science in Applied
+            Computer Science (HoGent, Cum Laude)
+          </li>
+          <ul className="pl-4">
+            <li>
+              <span className="text-white">* </span> Specialization in mobile
+              app development
+            </li>
+          </ul>
         </ul>
       </div>
     );
@@ -142,7 +161,7 @@ export const experiences = {
   usage: 'experiences',
   fn: function (terminal, isTypedCommand) {
     return (
-      <div>
+      <div className="pb-2">
         {isTypedCommand && (
           <span>
             {`${terminal.props.promptLabel} experiences`}
@@ -160,20 +179,18 @@ export const experiences = {
           </li>
           <ul className="pl-4">
             <li>
-              <span className="text-white">* </span> Creation of new React
-              application
+              <span className="text-white">* </span> Developing and mainter of 3
+              frontend applications.
             </li>
             <li>
-              <span className="text-white">* </span> Creation of Next.js
-              application
+              <span className="text-white">* </span> Creating a sharable UI
+              library
             </li>
             <li>
-              <span className="text-white">* </span> Testing both applications
-              in Jest and React Testing Framework
+              <span className="text-white">* </span> Managing 2 interns
             </li>
             <li>
-              <span className="text-white">* </span> Creation of shared npm
-              packages
+              <span className="text-white">* </span> Frontend architecture
             </li>
           </ul>
 
@@ -183,12 +200,12 @@ export const experiences = {
           </li>
           <ul className="pl-4">
             <li>
-              <span className="text-white">* </span> Helping to build a React
-              application
+              <span className="text-white">* </span> Developing React
+              application with Redux and Redux sagas
             </li>
             <li>
-              <span className="text-white">* </span> Create mappers for the
-              Hubble design system for Figma (Javascript)
+              <span className="text-white">* </span> Make design system
+              compatible with Figma
             </li>
           </ul>
 

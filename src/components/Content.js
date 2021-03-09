@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Content = ({ children }) => {
+const Content = ({ children, className }) => {
   return (
-    <div className="flex-grow flex flex-col p-2 md:px-4 lg:px-16 lg:py-8 lg:overflow-hidden">
+    <div className={`flex-grow flex flex-col lg:py-8 ${className}`}>
       {children}
     </div>
   );
