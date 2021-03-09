@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { useNavigate } from '@reach/router';
 
 import ProficePicture from './ProfilePicture';
 
 const Header = ({ hasPageLinks, hasBackButton }) => {
-  const navigate = useNavigate();
-
   return (
     <div className="w-full">
       <div className="flex flex-col md:flex-row items-center justify-center lg:justify-between lg:items-end content-end w-full p-4 lg:p-4 lg:px-16 text-extra">
