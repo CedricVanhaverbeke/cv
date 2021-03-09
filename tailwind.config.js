@@ -1,4 +1,5 @@
 module.exports = {
+  purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
@@ -40,5 +41,5 @@ module.exports = {
     extend: {},
   },
   variants: {},
-  plugins: [],
+  plugins: ['gatsby-plugin-postcss'],
 };
