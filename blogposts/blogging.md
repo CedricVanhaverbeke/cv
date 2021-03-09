@@ -22,7 +22,7 @@ Gatsby provides tools for building blazing fast static sites. We could write eve
 
 The filesystem can be accessed with GraphQL. I seriously recommend checking out the generated GraphQL playground. You can access it by visiting `http://localhost:YOUR_PORT/__graphql` when developing your app. You'll get an overview of all your available data nodes, and understand the file system a lot better.
 
-# Requirements the blog
+# Configuring the blog
 
 First, install following dependencies:
 
