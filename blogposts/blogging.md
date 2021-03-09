@@ -18,7 +18,7 @@ description: "Curious how I created this blog? Let's kick off my blogging career
 Gatsby provides tools for building blazing fast static sites. We could write every blogpost in React components or even plain HTML, but that would soon become very cumbersome. Markdown is the way to go! To achieve this goal, we'll use following Gatsby features:
 
 1. `gatsby-source-filesystem` : Allows for locally stored files to be used as data nodes inside your Gatsby application.
-2. `gatsby-transformer-remark` : This plugin is needed for markdown files to be transformed and to be used by the `gatsby-source-filesystem`.
+2. `gatsby-transformer-remark` : This plugin is needed for markdown files to be transformed and used by the `gatsby-source-filesystem`.
 
 The filesystem can be accessed with GraphQL. I seriously recommend checking out the generated GraphQL playground provided by Gatsby. You can access it by visiting `http://localhost:YOUR_PORT/__graphql` when developing your app. You'll get an overview of all your available data nodes, and understand the file system a lot better.
 
