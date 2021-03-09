@@ -46,12 +46,12 @@ const Header = ({ hasPageLinks, hasBackButton }) => {
           )}
 
           {hasBackButton && (
-            <button
-              onClick={() => navigate(-1)}
+            <Link
+              to="/blog"
               className="p-2 cursor-pointer text-white hover:text-extra focus:outline-none"
             >
               Back
-            </button>
+            </Link>
           )}
         </div>
       </div>
