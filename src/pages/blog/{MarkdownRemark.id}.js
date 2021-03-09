@@ -1,27 +1,13 @@
 import React from 'react';
-import rehypeReact from 'rehype-react';
 import { graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import Layout from '../../layouts/Layout';
 
 import Header from '../../components/Header';
+import BlogContent from '../../components/BlogContent';
 
-import BlogContent from '../../components/Blogpost/BlogContent';
-import PrimaryHeader from '../../components/BlogPost/PrimaryHeader';
-import SecondaryHeader from '../../components/BlogPost/SecondaryHeader';
-import Link from '../../components/BlogPost/Link';
-import CodeBlock from '../../components/BlogPost/CodeBlock';
-
-const renderAst = new rehypeReact({
-  createElement: React.createElement,
-  components: {
-    ['h1']: PrimaryHeader,
-    ['h2']: SecondaryHeader,
-    ['a']: Link,
-    ['code']: CodeBlock,
-  },
-}).Compiler;
+import renderAst from '../../utils/renderAst';
 
 const BlogPost = ({ data }) => {
   return (

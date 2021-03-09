@@ -28,8 +28,8 @@ The filesystem can be accessed with GraphQL. I seriously recommend checking out 
 
 First, install following dependencies:
 
-```
-# root of project
+```sh
+# command line
 
 yarn add gatsby-source-filesystem # or install with npm
 yarn add gatsby-transformer-remark # or install with npm
@@ -37,7 +37,7 @@ yarn add gatsby-transformer-remark # or install with npm
 
 After that, some config has to be set up:
 
-```json
+```js
 // gatsby-config.js
 
 module.exports = {
@@ -148,6 +148,8 @@ For example, notice `timeToRead` on line 20. This is automatically determined by
 The real star of the show however is `htmlAst`. This will allow the generated HTML to be modified with some custom `React` components. However, another package is needed for this.
 
 ```sh
+# command line
+
 yarn add rehype-react # or install with npm
 ```
 
