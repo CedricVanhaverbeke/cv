@@ -16,6 +16,17 @@ const BlogPost = ({ data }) => {
     <Layout>
       <Helmet>
         <title>{data.markdownRemark.frontmatter.title}</title>
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@blog" />
+        <meta name="twitter:creator" content="@cedricvh" />
+        <meta
+          property="og:title"
+          content={`${data.markdownRemark.frontmatter.title}`}
+        />
+        <meta
+          property="og:description"
+          content={`${data.markdownRemark.frontmatter.description}`}
+        />
       </Helmet>
       <Header hasBackButton={true} hasPageLinks={false} />
 
