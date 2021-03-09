@@ -1,6 +1,6 @@
 import React from 'react';
 
-const H1 = ({ children }) => {
+const PrimaryHeader = ({ children }) => {
   return (
     <h1 style={{ fontFamily: 'Roboto' }} className="text-2xl md:text-3xl my-6">
       {children}
@@ -8,4 +8,4 @@ const H1 = ({ children }) => {
   );
 };
 
-export default H1;
+export default PrimaryHeader;

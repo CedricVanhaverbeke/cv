@@ -1,6 +1,6 @@
 import React from 'react';
 
-const A = ({ href, children }) => {
+const Link = ({ href, children }) => {
   return (
     <a target="_blank" href={href} className="text-extra">
       {children}
@@ -8,4 +8,4 @@ const A = ({ href, children }) => {
   );
 };
 
-export default A;
+export default Link;

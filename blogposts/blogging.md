@@ -171,13 +171,13 @@ If you just want to render your markdown file, you'll be happy with this. But wh
 ```js
 // src/pages/blog/{MarkdownRemark.id}.js
 
-const FirstHeader = ({ children }) => {
+const PrimaryHeader = ({ children }) => {
     return <h1 className='some-cool-class'>{children}</h1>
 }
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { h1: FirstHeader }
+  components: {['h1']: PrimaryHeader}
 }).Compiler;
 
 ...

@@ -8,14 +8,19 @@ import Layout from '../../layouts/Layout';
 import Header from '../../components/Header';
 
 import BlogContent from '../../components/Blogpost/BlogContent';
-import H1 from '../../components/BlogPost/H1';
-import H2 from '../../components/BlogPost/H2';
-import A from '../../components/BlogPost/A';
+import PrimaryHeader from '../../components/BlogPost/PrimaryHeader';
+import SecondaryHeader from '../../components/BlogPost/SecondaryHeader';
+import Link from '../../components/BlogPost/Link';
 import CodeBlock from '../../components/BlogPost/CodeBlock';
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { h1: H1, h2: H2, a: A, code: CodeBlock },
+  components: {
+    ['h1']: PrimaryHeader,
+    ['h2']: SecondaryHeader,
+    ['a']: Link,
+    ['code']: CodeBlock,
+  },
 }).Compiler;
 
 const BlogPost = ({ data }) => {
