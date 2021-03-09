@@ -20,17 +20,15 @@ Gatsby provides tools for building blazing fast static sites. We could write eve
 1. `gatsby-source-filesystem` : Allows for locally stored files to be used as data nodes inside your Gatsby application.
 2. `gatsby-transformer-remark` : This plugin is needed for markdown files to be transformed and to be used by the `gatsby-source-filesystem`.
 
-The filesystem can be accessed with GraphQL. I seriously recommend checking out the generated GraphQL playground. You can access it by visiting `http://localhost:YOUR_PORT/__graphql` when developing your app. You'll get an overview of all your available data nodes, and understand the file system a lot better.
+The filesystem can be accessed with GraphQL. I seriously recommend checking out the generated GraphQL playground provided by Gatsby. You can access it by visiting `http://localhost:YOUR_PORT/__graphql` when developing your app. You'll get an overview of all your available data nodes, and understand the file system a lot better.
 
 # Configuring the blog
 
 First, install following dependencies:
 
-```sh
-# command line
-
-yarn add gatsby-source-filesystem # or install with npm
-yarn add gatsby-transformer-remark # or install with npm
+```
+yarn add gatsby-source-filesystem
+yarn add gatsby-transformer-remark
 ```
 
 After that, some config has to be set up to let the filesystem know where to look for blogposts:
@@ -58,7 +56,7 @@ The next step consist of creating two pages in the project. One page is responsi
 1. `src/pages/blog/index.js` : The list of blogposts. This file will be rendered when visiting the `/blog` route.
 2. `src/pages/blog/{MarkdownRemark.id}.js` : The blogpost itself. This page will show up when visiting the `/blog/your-id-here` route.
 
-Lastly, add a mock blogpost in the folder you configured, so you can actually get some data. Some extra metadata can be passed in the frontmatter section of the markdown file as shown below.
+Lastly, add a mock blogpost in the folder you configured, so you can actually fetch some data. Some extra metadata can be passed in the frontmatter section of the markdown file as shown below.
 
 ```
 ---
@@ -67,7 +65,7 @@ title: 'Blogging with Gatsby and Markdown'
 description: ''
 ---
 
-Your first blogpost
+# Title of your first blogpost.
 ```
 
 # Creating an overview of blogposts
@@ -111,7 +109,7 @@ Notice line 7. The `Link` component will make sure the right blogpost is opened 
 
 # Creating a blogpost page
 
-We can use the passed id in a new `pageQuery`. This query will fetch all the information of an individual blogpost. Some neat fields are added by the `gatsby-transformer-remark` plugin:
+We can use the passed id in a new `pageQuery`. This query will fetch all the information of an individual blogpost. Some neat fields are added by the `gatsby-transformer-remark` plugin. For example, notice `timeToRead` on line 20. :
 
 ```js
 // src/pages/blog/{MarkdownRemark.id}.js
@@ -141,14 +139,12 @@ export const pageQuery = graphql`
 export default BlogPost;
 ```
 
-For example, notice `timeToRead` on line 20. This is automatically determined by our used plugin. There are some other useful fields you can check for yourself in the GraphQL playground I mentioned above.
+There are some other useful fields you can check for yourself in the GraphQL playground I mentioned above.
 
 The real star of the show however is `htmlAst`. This will allow the generated HTML to be modified with some custom `React` components. But we should not get ahead of ourselves. We need to add another dependency to make that magic happen:
 
-```sh
-# command line
-
-yarn add rehype-react # or install with npm
+```
+yarn add rehype-react
 ```
 
 To make it transform our generated `html`, we just need to configure the Compiler to render React components instead. I added everything in the same file for the sake of simplicity, but you might want to put this function in a different spot:
@@ -166,7 +162,7 @@ const BlogPost = ({ data }) =>
 };
 ```
 
-If you just want to render your markdown file, you'll be happy with this. But where's the fun in that? We are frontend developers after all. Let's customize the generated components. The `rehypeReact` constructor allows for an optional `components` key in its configuration object. You can pass it an object containing key-value pairs with the HTML tag and its corresponding `React` component:
+If you just want to render your markdown file, you'll be happy with this configuration. But where's the fun in that? We are frontend developers after all. Let's customize the generated components. The `rehypeReact` constructor allows for an optional `components` key in its configuration object. You can pass it an object containing key-value pairs with the HTML tag and its corresponding `React` component:
 
 ```js
 // src/pages/blog/{MarkdownRemark.id}.js
@@ -188,7 +184,7 @@ After this change, your `h1` tag will be rendered with a custom class! This way,
 However, it would be quite frustrating to add components for each html tag. That's why I added a wrapper class on line 9 of the previous code block. You can add some custom CSS to descendants of this wrapper without having to render a component for each HTML tag you want to customize. You might want to do something like this:
 
 ```css
-/* inside your css file */
+/* inside a css file */
 
 .blogpost p {
   add-some-cool-styles
