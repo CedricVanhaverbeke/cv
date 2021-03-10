@@ -21,7 +21,9 @@ const Window = ({ children, className, isClosable }) => {
 
   return (
     <div
-      className={`flex flex-col flex-grow w-full rounded-xl p-1 bg-dark overflow-hidden ${className}`}
+      className={`flex flex-col flex-grow w-full rounded-xl p-1 bg-dark overflow-hidden ${
+        className || ''
+      }`}
     >
       <div className="h-8 flex items-center justify-start p-3 gap-x-2">
         <button
