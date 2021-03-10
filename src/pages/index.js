@@ -15,12 +15,12 @@ import '../theme/tailwind.css';
 
 const promptLabel = '$';
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   const terminalRef = useRef();
 
   return (
     <Layout>
-      <Header />
+      <Header location={location} />
 
       <Content className="p-2 md:px-4 lg:px-16 lg:overflow-hidden">
         <Terminal

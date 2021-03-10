@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 import ProficePicture from './ProfilePicture';
 
-const Header = ({ hasPageLinks, hasBackButton }) => {
+const Header = ({ hasPageLinks, hasBackButton, location }) => {
   return (
     <div className="w-full">
       <div className="flex flex-col md:flex-row items-center justify-center lg:justify-between lg:items-end content-end w-full p-4 lg:p-4 lg:px-16 text-extra">
@@ -31,13 +31,21 @@ const Header = ({ hasPageLinks, hasBackButton }) => {
             <>
               <Link
                 to="/"
-                className="p-2 cursor-pointer text-white hover:text-extra"
+                className={`${
+                  location.pathname === '/'
+                    ? 'text-extra cursor-default'
+                    : 'cursor-pointer text-white hover:text-extra'
+                } p-2`}
               >
                 About
               </Link>
               <Link
                 to="/blog"
-                className="p-2 cursor-pointer text-white hover:text-extra"
+                className={`${
+                  location.pathname.startsWith('/blog')
+                    ? 'text-extra cursor-default'
+                    : 'cursor-pointer text-white hover:text-extra'
+                } p-2`}
               >
                 Blog
               </Link>
@@ -61,6 +69,7 @@ const Header = ({ hasPageLinks, hasBackButton }) => {
 Header.defaultProps = {
   hasBackButton: false,
   hasPageLinks: true,
+  location: { pathname: '' },
 };
 
 export default Header;

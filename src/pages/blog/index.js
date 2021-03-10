@@ -10,12 +10,12 @@ import Header from '../../components/Header';
 import Content from '../../components/Content';
 import Window from '../../components/Window';
 
-const Overview = ({ data }) => {
+const Overview = ({ data, location }) => {
   const { allMarkdownRemark } = data;
 
   return (
     <Layout>
-      <Header />
+      <Header location={location} />
       <Helmet>
         <title>Blog - Cedric Vanhaverbeke</title>
       </Helmet>

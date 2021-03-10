@@ -179,8 +179,8 @@ export const experiences = {
           </li>
           <ul className="pl-4">
             <li>
-              <span className="text-white">* </span> Developing and mainter of 3
-              frontend applications.
+              <span className="text-white">* </span> Developing and maintainer
+              of 3 frontend applications.
             </li>
             <li>
               <span className="text-white">* </span> Creating a sharable UI
