@@ -29,10 +29,10 @@ const Overview = ({ data, location }) => {
                   <Link
                     to={node.id}
                     style={{ fontFamily: 'Fira Mono' }}
-                    className="flex flex-col p-3"
+                    className="flex flex-col p-3 flex-grow"
                   >
                     <h1>{node.frontmatter.title}</h1>
-                    <span className="text-xs opacity-75 mb-4">
+                    <span className="text-xs opacity-75 mb-4 flex-grow">
                       {node.frontmatter.description}
                     </span>
                     <span className="text-xs self-end">
