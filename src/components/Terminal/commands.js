@@ -195,6 +195,12 @@ export const experiences = {
           </ul>
 
           <li>
+            <span className="text-extra">-</span> Master's thesis on
+            researching, creation and comparing of a supervised and unsupervised
+            approach to music prediction (2019)
+          </li>
+
+          <li>
             <span className="text-extra">-</span> Internship at In The Pocket
             (2019)
           </li>
