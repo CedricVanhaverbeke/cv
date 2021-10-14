@@ -15,27 +15,19 @@ export const whoami = {
           My name is Cedric Vanhaverbeke. I'm a motivated{' '}
           <span className="text-extra">software engineer</span> from Belgium{' '}
           <Emoji symbol={'\u{1F1E7}\u{1F1EA}'} label="belgium" /> . Currently
-          I'm working at <span className="text-extra">FTRPRF</span>, a company
-          that aims to teach children how to program at a young age!
+          I'm working at <span className="text-extra">Waylay</span>.
         </p>
         <p className="mb-2">
           In this stage of my career, I want to{' '}
           <span className="text-extra">learn</span>{' '}
           <Emoji symbol={'\u{1F4D6}'} label="book" /> as much as possible. Right
-          now, I'm solving problems in the frontend with React. I like the
-          architecture of the application I'm working on to be elegant. React is
-          a great tool to achieve this goal in my opinion.
-        </p>
-        <p className="mb-2">
-          In my masters thesis I got a taste of machine learning and how it may
-          help to solve otherwise impossible problems. I hope to get Tensorflow
-          certified and I'm planning to blog about this journey as well.
+          now, I'm solving problems Javascript and Typescript. I like the
+          architecture of the application I'm working on to be elegant.
         </p>
         <p className="mb-2">
           Programming and technology aside, I love to play boardgames and
           playing the <Emoji symbol={'🎸'} label="guitar" />. I'm also always
           available to chat and to grab a <Emoji symbol={'🍺'} label="🍺" />.
-          Too bad going to a bar is not a thing at the moment...
         </p>
       </div>
     );
@@ -74,12 +66,10 @@ export const technologies = {
               <div>
                 <ul>
                   <li className="mt-40">Machine learning</li>
-                  <li>Tensorflow</li>
-                  <li>PyTorch</li>
-                  <li>Flutter</li>
                   <li>WebAssembly</li>
                   <li>Terraform</li>
                   <li>JAMstack</li>
+                  <li>Golang</li>
                 </ul>
               </div>
               <div>
@@ -92,7 +82,6 @@ export const technologies = {
                   <li>React-native</li>
                   <li>C</li>
                   <li>C++</li>
-                  <li>Jest</li>
                   <li>Next</li>
                   <li>Gatsby</li>
                   <li>Docker</li>
@@ -103,6 +92,8 @@ export const technologies = {
                 <ul>
                   <li style={{ marginTop: '12rem' }}>React</li>
                   <li>React testing library</li>
+                  <li>Jest</li>
+                  <li>Typescript</li>
                   <li>HTML, CSS, Javascript</li>
                 </ul>
               </div>

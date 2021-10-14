@@ -19,7 +19,8 @@ const Header = ({ hasPageLinks, hasBackButton, location }) => {
               Cedric Vanhaverbeke
             </div>
             <div className="text-xs md:text-sm ml-1">
-              Software engineer at <span className="text-white">FTRPRF</span>.
+              Full stack developer at <span className="text-white">Waylay</span>
+              .
             </div>
             <div className="text-xs md:text-sm ml-1">
               I solve problems through quality software.
