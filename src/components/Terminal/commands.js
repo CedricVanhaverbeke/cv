@@ -165,8 +165,12 @@ export const experiences = {
         </p>
         <ul className="list-outside pl-1">
           <li>
+            <span className="text-extra">-</span> Full stack developer at Waylay
+            (currently)
+          </li>
+          <li>
             <span className="text-extra">-</span> Frontend developer at FTRPRF
-            (2020 - current)
+            (2019 - 2021)
           </li>
           <ul className="pl-4">
             <li>
