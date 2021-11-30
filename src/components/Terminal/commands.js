@@ -15,7 +15,10 @@ export const whoami = {
           My name is Cedric Vanhaverbeke. I'm a motivated{' '}
           <span className="text-extra">software engineer</span> from Belgium{' '}
           <Emoji symbol={'\u{1F1E7}\u{1F1EA}'} label="belgium" /> . Currently
-          I'm working at <span className="text-extra">Waylay</span>.
+          I'm working at <span className="text-extra">Waylay</span>. I'm mostly
+          responsible for developing and maintaining a microservice that handles
+          the deployment and lifecycle of serverless functions. I'm also actively 
+          developing the frontend application using React.
         </p>
         <p className="mb-2">
           In this stage of my career, I want to{' '}
@@ -76,7 +79,6 @@ export const technologies = {
                 <ul>
                   <li className="mt-10">Java</li>
                   <li>Python</li>
-                  <li>Nodejs</li>
                   <li>Bash scripting</li>
                   <li>SKLearn</li>
                   <li>React-native</li>
@@ -91,6 +93,7 @@ export const technologies = {
               <div>
                 <ul>
                   <li style={{ marginTop: '12rem' }}>React</li>
+                  <li>Node.js</li>
                   <li>React testing library</li>
                   <li>Jest</li>
                   <li>Typescript</li>
@@ -168,6 +171,19 @@ export const experiences = {
             <span className="text-extra">-</span> Full stack developer at Waylay
             (currently)
           </li>
+          <ul className="pl-4">
+            <li>
+              <span className="text-white">* </span> Developing and maintaining a Node.js microservice
+              that handles creation of serverless functions using Docker, Buildkit, Openfaas, MinIO, Fastify, MikroORM
+              and more 
+            </li>
+            <li>
+              <span className="text-white">* </span> Frontend application in React
+            </li>
+            <li>
+              <span className="text-white">* </span> Development of Waylay SDK in Javascript.  
+            </li>
+          </ul>
           <li>
             <span className="text-extra">-</span> Frontend developer at FTRPRF
             (2019 - 2021)
