@@ -15,6 +15,7 @@ const Terminal = ({
   return (
     <Window className={className} isClosable={isClosable}>
       <CETerminal
+        noDefaults
         ref={terminalRef}
         style={{ backgroundColor: '#191A21' }}
         className="flex-grow w-full react-terminal"
@@ -23,19 +24,18 @@ const Terminal = ({
         inputStyle={{ color: '#FFF', paddingTop: '1rem' }}
         welcomeMessage={
           welcomeMessage || (
-            <div className="flex flex-col gap-x-2 w-full gap-y-6 pb-2">
+            <div className="flex flex-col gap-x-2 w-full gap-y-6 pb-4 border-b border-accent-200 mb-4">
               <p>My name is Cedric Vanhaverbeke. Nice to meet you! </p>
-              <p>
+              <div>
                 Enter one of the following commands to get to know me:
                 <ul>
                   <li>help - Show a list of available commands.</li>
-                  <li>clear - Empty the terminal window.</li>
                   <li>whoami - Get to know me a bit better</li>
                   <li>technologies - What technologies are on my radar?</li>
                   <li>degrees - My obtained degrees</li>
                   <li>experiences - Find out about my work experiences</li>
                 </ul>
-              </p>
+              </div>
             </div>
           )
         }

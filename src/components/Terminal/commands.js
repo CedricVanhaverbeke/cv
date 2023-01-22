@@ -7,7 +7,7 @@ export const whoami = {
   description: 'Get to know me a little better',
   fn: function (terminal, isTypedCommand) {
     return (
-      <div>
+      <div className="pb-4 border-b border-accent-200 mb-4">
         {isTypedCommand && (
           <span>{`${terminal.props.promptLabel} whoami`}</span>
         )}
@@ -15,17 +15,14 @@ export const whoami = {
           My name is Cedric Vanhaverbeke. I'm a motivated{' '}
           <span className="text-extra">software engineer</span> from Belgium{' '}
           <Emoji symbol={'\u{1F1E7}\u{1F1EA}'} label="belgium" /> . Currently
-          I'm working at <span className="text-extra">Waylay</span>. I'm mostly
-          responsible for developing and maintaining a microservice that handles
-          the deployment and lifecycle of serverless functions. I'm also actively 
-          developing the frontend application using React.
+          I'm working at <span className="text-extra">Be-Mobile</span> on the
+          4411 parking application. It's awesome to work on a product that is
+          used by a lot of people on a daily basis.
         </p>
         <p className="mb-2">
-          In this stage of my career, I want to{' '}
-          <span className="text-extra">learn</span>{' '}
-          <Emoji symbol={'\u{1F4D6}'} label="book" /> as much as possible. Right
-          now, I'm solving problems Javascript and Typescript. I like the
-          architecture of the application I'm working on to be elegant.
+          I have a <span className="text-extra">can-do</span> attitude{' '}
+          <Emoji symbol={'💪'} label="💪" />. I like searching for a solutions
+          that are both technically elegant and maintainable in the long term.
         </p>
         <p className="mb-2">
           Programming and technology aside, I love to play boardgames and
@@ -41,7 +38,7 @@ export const technologies = {
   description: 'What technologies are on my radar?',
   fn: function (terminal, isTypedCommand) {
     return (
-      <div className="flex-col flex-grow">
+      <div className="flex-col flex-grow pb-4 border-b border-accent-200 mb-4">
         {isTypedCommand && (
           <span>{`${terminal.props.promptLabel} technologies`}</span>
         )}
@@ -68,36 +65,36 @@ export const technologies = {
             <Row>
               <div>
                 <ul>
-                  <li className="mt-40">Machine learning</li>
-                  <li>WebAssembly</li>
-                  <li>Terraform</li>
-                  <li>JAMstack</li>
-                  <li>Golang</li>
+                  <li className="mt-64">ML</li>
+                  <li>C/C++</li>
                 </ul>
               </div>
               <div>
                 <ul>
                   <li className="mt-10">Java</li>
-                  <li>Python</li>
+                  <li>PHP</li>
                   <li>Bash scripting</li>
-                  <li>SKLearn</li>
-                  <li>React-native</li>
-                  <li>C</li>
-                  <li>C++</li>
-                  <li>Next</li>
-                  <li>Gatsby</li>
+                  <li className="mt-24">Python</li>
+                  <li>Next, Gatsby, Remix</li>
+                  <li>Serverless</li>
+                  <li>SQL/NoSQL</li>
                   <li>Docker</li>
                   <li>Kubernetes</li>
+                  <li>Helm</li>
+                  <li>Go</li>
                 </ul>
               </div>
               <div>
                 <ul>
-                  <li style={{ marginTop: '12rem' }}>React</li>
+                  <li style={{ marginTop: '12rem' }}>React-Native</li>
+                  <li>React</li>
+                  <li>Vue</li>
+                  <li>Git</li>
                   <li>Node.js</li>
                   <li>React testing library</li>
                   <li>Jest</li>
                   <li>Typescript</li>
-                  <li>HTML, CSS, Javascript</li>
+                  <li>HTML, CSS, Javascript (duh)</li>
                 </ul>
               </div>
             </Row>
@@ -112,7 +109,7 @@ export const degrees = {
   description: 'My obtained degrees',
   fn: function (terminal, isTypedCommand) {
     return (
-      <div className="pb-2">
+      <div className="pb-4 border-b border-accent-200 mb-4">
         {isTypedCommand && (
           <span>
             {`${terminal.props.promptLabel} degrees`}
@@ -155,7 +152,7 @@ export const experiences = {
   usage: 'experiences',
   fn: function (terminal, isTypedCommand) {
     return (
-      <div className="pb-2">
+      <div className="pb-4 border-b border-accent-200 mb-4">
         {isTypedCommand && (
           <span>
             {`${terminal.props.promptLabel} experiences`}
@@ -168,20 +165,43 @@ export const experiences = {
         </p>
         <ul className="list-outside pl-1">
           <li>
-            <span className="text-extra">-</span> Full stack developer at Waylay
-            (currently)
+            <span className="text-extra">-</span> Full stack developer at
+            Be-Mobile (current)
           </li>
           <ul className="pl-4">
             <li>
-              <span className="text-white">* </span> Developing and maintaining a Node.js microservice
-              that handles creation of serverless functions using Docker, Buildkit, Openfaas, MinIO, Fastify, MikroORM
-              and more 
+              <span className="text-white">* </span> Migrating an old SSR
+              rendered Symfony web application to a Vue3 frontend.
             </li>
             <li>
-              <span className="text-white">* </span> Frontend application in React
+              <span className="text-white">* </span> Dockerizing all services
+              related to 4411.
             </li>
             <li>
-              <span className="text-white">* </span> Development of Waylay SDK in Javascript.  
+              <span className="text-white">* </span> Setting up and
+              configuration of K8s cluster.
+            </li>
+            <li>
+              <span className="text-white">* </span> Writing small Go services.
+            </li>
+          </ul>
+          <li>
+            <span className="text-extra">-</span> Full stack developer at Waylay
+          </li>
+          <ul className="pl-4">
+            <li>
+              <span className="text-white">* </span> Developing and maintaining
+              a Node.js microservice that handles creation of serverless
+              functions using Docker, Buildkit, Openfaas, MinIO, Fastify,
+              MikroORM and more
+            </li>
+            <li>
+              <span className="text-white">* </span> Frontend application in
+              React
+            </li>
+            <li>
+              <span className="text-white">* </span> Development of Waylay SDK
+              in Javascript.
             </li>
           </ul>
           <li>
@@ -258,6 +278,29 @@ export const experiences = {
             <span className="text-extra">-</span> Helpdesk at general hospital
             Maria Middelares (2016)
           </li>
+        </ul>
+      </div>
+    );
+  },
+};
+
+export const help = {
+  description: 'My obtained degrees',
+  fn: function (terminal, isTypedCommand) {
+    return (
+      <div className="pb-4 border-b border-accent-200 mb-4">
+        {isTypedCommand && (
+          <span>
+            {`${terminal.props.promptLabel} help`}
+            <br />
+          </span>
+        )}
+        <ul>
+          <li>help - Show a list of available commands.</li>
+          <li>whoami - Get to know me a bit better</li>
+          <li>technologies - What technologies are on my radar?</li>
+          <li>degrees - My obtained degrees</li>
+          <li>experiences - Find out about my work experiences</li>
         </ul>
       </div>
     );
