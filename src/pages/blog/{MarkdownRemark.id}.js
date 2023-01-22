@@ -15,7 +15,7 @@ const BlogPost = ({ data }) => {
   return (
     <Layout>
       <Helmet>
-        <title>{data.markdownRemark.frontmatter.title}</title>
+        <title>{data.markdownRemark.frontmatter?.title}</title>
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@blog" />
         <meta name="twitter:creator" content="@cedricvh" />

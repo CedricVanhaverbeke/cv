@@ -19,8 +19,8 @@ const Header = ({ hasPageLinks, hasBackButton, location }) => {
               Cedric Vanhaverbeke
             </div>
             <div className="text-xs md:text-sm ml-1">
-              Full stack developer at <span className="text-white">Be-Mobile</span>
-              .
+              Full stack developer at{' '}
+              <span className="text-white">Be-Mobile</span>.
             </div>
             <div className="text-xs md:text-sm ml-1">
               I solve problems through quality software.
@@ -28,7 +28,7 @@ const Header = ({ hasPageLinks, hasBackButton, location }) => {
           </div>
         </div>
         <div className="flex items-center space-x-2 self-center md:self-start">
-          {hasPageLinks && (
+          {/* {hasPageLinks && (
             <>
               <Link
                 to="/"
@@ -51,7 +51,7 @@ const Header = ({ hasPageLinks, hasBackButton, location }) => {
                 Blog
               </Link>
             </>
-          )}
+          )} */}
 
           {hasBackButton && (
             <Link
